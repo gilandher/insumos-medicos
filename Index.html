@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JAVIPG | Insumos Médicos, Hospitalarios y Odontológicos</title>
   <meta name="description" content="JAVIPG ofrece insumos médicos, hospitalarios, odontológicos, herramientas médicas y quirúrgicas con atención profesional y cotización rápida." />
+  <meta name="keywords" content="insumos médicos, insumos hospitalarios, insumos odontológicos, instrumental quirúrgico, equipos médicos, JAVIPG" />
+  <meta name="author" content="JAVIPG" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="JAVIPG | Insumos Médicos, Hospitalarios y Odontológicos" />
+  <meta property="og:description" content="Proveedor de insumos médicos, hospitalarios, odontológicos y herramientas quirúrgicas con atención rápida por WhatsApp." />
+  <meta property="og:image" content="assets/img/hero-medicos.jpg" />
+  <meta property="og:locale" content="es_CO" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0f9b8e" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <style>
     :root{
       --primary:#0f9b8e;
@@ -529,6 +540,43 @@
 
     .footer-grid strong{color:#fff}
 
+    .whatsapp-float{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:62px;
+      height:62px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#25D366,#128C7E);
+      color:#fff;
+      box-shadow:0 18px 35px rgba(18,140,126,.35);
+      z-index:1100;
+      font-size:1.7rem;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .whatsapp-float:hover{transform:translateY(-4px) scale(1.03);}
+
+    .reveal{
+      opacity:0;
+      transform:translateY(28px);
+      transition:opacity .8s ease, transform .8s ease;
+      will-change:transform, opacity;
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .contact-note{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+
     @media (max-width:1100px){
       .hero-grid,
       .contact-box{
@@ -627,7 +675,7 @@
         <div class="hero-slider">
           <div class="slides" id="heroSlides">
             <div class="slide active">
-              <img src="Medical Supplies and Healthcare Essentials Arranged on a White Surface.jpg" alt="Insumos médicos">
+              <img src="assets/img/medical-supplies.jpg" alt="Insumos médicos">
               <div class="slide-overlay">
                 <div class="box">
                   <h3>Insumos médicos esenciales</h3>
@@ -637,7 +685,7 @@
             </div>
 
             <div class="slide">
-              <img src="PPE Kit Disposable -90 GSM Laminated Lightweight Non-woven White & Blue (color may vary).jpg" alt="Kit de bioseguridad">
+              <img src="assets/img/ppe-kit.jpg" alt="Kit de bioseguridad">
               <div class="slide-overlay">
                 <div class="box">
                   <h3>Bioseguridad y protección</h3>
@@ -647,7 +695,7 @@
             </div>
 
             <div class="slide">
-              <img src="descarga.jpg" alt="Desechos biosanitarios">
+              <img src="assets/img/biohazard-container.jpg" alt="Desechos biosanitarios">
               <div class="slide-overlay">
                 <div class="box">
                   <h3>Manejo seguro y clínico</h3>
@@ -657,7 +705,7 @@
             </div>
 
             <div class="slide">
-              <img src="descarga (1).jpg" alt="Equipos de diagnóstico">
+              <img src="assets/img/diagnostic-tools.jpg" alt="Equipos de diagnóstico">
               <div class="slide-overlay">
                 <div class="box">
                   <h3>Equipos y diagnóstico</h3>
@@ -674,14 +722,14 @@
 
     <section id="categorias">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h3>Nuestras categorías</h3>
           <p>
             Una propuesta completa para abastecer médicos, hospitales, clínicas, consultorios y centros odontológicos con una imagen seria, limpia y profesional.
           </p>
         </div>
 
-        <div class="grid-4">
+        <div class="grid-4 reveal">
           <div class="card">
             <div class="icon">🩺</div>
             <h4>Insumos médicos</h4>
@@ -711,17 +759,17 @@
 
     <section id="productos" class="products">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h3>Productos destacados</h3>
           <p>
             Un carrusel visual para dar vida a la página y mostrar la variedad de productos disponibles para tus clientes.
           </p>
         </div>
 
-        <div class="product-slider">
+        <div class="product-slider reveal">
           <div class="product-track" id="productTrack">
             <div class="product-card">
-              <img src="PPE Kit Disposable -90 GSM Laminated Lightweight Non-woven White & Blue (color may vary).jpg" alt="Kit de protección">
+              <img src="assets/img/ppe-kit.jpg" alt="Kit de protección">
               <div class="product-info">
                 <h4>Kit de bioseguridad</h4>
                 <p>Protección integral para personal médico, clínico y hospitalario en tareas de atención y prevención.</p>
@@ -730,7 +778,7 @@
             </div>
 
             <div class="product-card">
-              <img src="descarga.jpg" alt="Contenedor clínico">
+              <img src="assets/img/biohazard-container.jpg" alt="Contenedor clínico">
               <div class="product-info">
                 <h4>Manejo de residuos médicos</h4>
                 <p>Soluciones para disposición y control en ambientes de atención y manejo biosanitario.</p>
@@ -739,7 +787,7 @@
             </div>
 
             <div class="product-card">
-              <img src="Medical Supplies and Healthcare Essentials Arranged on a White Surface.jpg" alt="Insumos de salud">
+              <img src="assets/img/medical-supplies.jpg" alt="Insumos de salud">
               <div class="product-info">
                 <h4>Material clínico general</h4>
                 <p>Productos esenciales para consulta, curación, cuidado del paciente y atención médica cotidiana.</p>
@@ -748,7 +796,7 @@
             </div>
 
             <div class="product-card">
-              <img src="descarga (1).jpg" alt="Instrumentos médicos">
+              <img src="assets/img/diagnostic-tools.jpg" alt="Instrumentos médicos">
               <div class="product-info">
                 <h4>Equipos de diagnóstico</h4>
                 <p>Dispositivos y herramientas de apoyo para evaluación, consulta y revisión médica profesional.</p>
@@ -757,7 +805,7 @@
             </div>
 
             <div class="product-card">
-              <img src="Insumos Médicos.jpg" alt="Productos médicos">
+              <img src="assets/img/medical-products.jpg" alt="Productos médicos">
               <div class="product-info">
                 <h4>Antisépticos y curación</h4>
                 <p>Materiales e insumos para limpieza, desinfección, cobertura y cuidado en procesos clínicos.</p>
@@ -766,7 +814,7 @@
             </div>
 
             <div class="product-card">
-              <img src="FifthPulse Blue Vinyl Disposable Gloves Small 50 Pack - Latex Free, Powder Free Medical Exam ___.jpg" alt="Guantes desechables">
+              <img src="assets/img/blue-gloves.jpg" alt="Guantes desechables">
               <div class="product-info">
                 <h4>Guantes desechables</h4>
                 <p>Protección para examen, procedimientos y atención médica con presentación profesional y práctica.</p>
@@ -785,14 +833,14 @@
 
     <section id="beneficios">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h3>¿Por qué elegir JAVIPG?</h3>
           <p>
             Esta landing está pensada para transmitir confianza, orden visual, autoridad comercial y generar más oportunidades de contacto.
           </p>
         </div>
 
-        <div class="benefits">
+        <div class="benefits reveal">
           <div class="benefit">
             <div class="icon">✓</div>
             <h4>Confianza profesional</h4>
@@ -822,7 +870,7 @@
 
     <section>
       <div class="container">
-        <div class="cta-band">
+        <div class="cta-band reveal">
           <div>
             <h3>Haz crecer tu negocio de insumos médicos con una imagen profesional</h3>
             <p>Convierte visitas en clientes con una presentación clara, moderna y enfocada en confianza y ventas.</p>
@@ -834,12 +882,12 @@
 
     <section id="contacto">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <h3>Formulario de contacto</h3>
           <p>Recibe solicitudes, pedidos, cotizaciones y oportunidades de negocio desde una sola página.</p>
         </div>
 
-        <div class="contact-box">
+        <div class="contact-box reveal">
           <div class="contact-card">
             <h4>Estamos listos para atenderte</h4>
             <p>
@@ -856,18 +904,18 @@
 
           <div class="contact-card">
             <h4>Solicita tu cotización</h4>
-            <form>
+            <form id="contactForm">
               <div class="row">
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="text" placeholder="Empresa / clínica / consultorio">
+                <input id="nombre" type="text" placeholder="Nombre completo" required>
+                <input id="empresa" type="text" placeholder="Empresa / clínica / consultorio">
               </div>
 
               <div class="row">
-                <input type="email" placeholder="Correo electrónico" required>
-                <input type="tel" placeholder="Teléfono / WhatsApp" required>
+                <input id="correo" type="email" placeholder="Correo electrónico" required>
+                <input id="telefono" type="tel" placeholder="Teléfono / WhatsApp" required>
               </div>
 
-              <select required>
+              <select id="categoria" required>
                 <option value="">Selecciona una categoría</option>
                 <option>Insumos médicos</option>
                 <option>Insumos hospitalarios</option>
@@ -877,7 +925,9 @@
                 <option>Cotización general</option>
               </select>
 
-              <textarea placeholder="Escribe qué productos necesitas, cantidades aproximadas o el tipo de requerimiento..." required></textarea>
+              <textarea id="mensaje" placeholder="Escribe qué productos necesitas, cantidades aproximadas o el tipo de requerimiento..." required></textarea>
+
+              <p class="contact-note">Al enviar, se abrirá WhatsApp con tu mensaje listo para enviar al asesor comercial.</p>
 
               <button type="submit" class="btn btn-primary">Enviar solicitud</button>
             </form>
@@ -896,6 +946,9 @@
       <div>© 2026 JAVIPG. Todos los derechos reservados.</div>
     </div>
   </footer>
+
+
+  <a class="whatsapp-float" href="https://wa.me/573015470698?text=Hola%20JAVIPG%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20insumos%20m%C3%A9dicos." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">✆</a>
 
   <script>
     // HERO SLIDER
@@ -971,6 +1024,39 @@
     window.addEventListener("load", updateCarousel);
 
     setInterval(nextProduct, 5000);
+
+    // REVEAL ANIMATIONS
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // WHATSAPP FORM
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const empresa = document.getElementById('empresa').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const categoria = document.getElementById('categoria').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      const texto = `Hola JAVIPG, quiero solicitar una cotización.%0A%0A` +
+        `*Nombre:* ${encodeURIComponent(nombre)}%0A` +
+        `*Empresa / Clínica:* ${encodeURIComponent(empresa || 'No especificada')}%0A` +
+        `*Correo:* ${encodeURIComponent(correo)}%0A` +
+        `*Teléfono:* ${encodeURIComponent(telefono)}%0A` +
+        `*Categoría:* ${encodeURIComponent(categoria)}%0A` +
+        `*Detalle:* ${encodeURIComponent(mensaje)}`;
+
+      window.open(`https://wa.me/573015470698?text=${texto}`, '_blank');
+    });
   </script>
 </body>
 </html>
